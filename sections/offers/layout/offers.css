@@ -1,0 +1,149 @@
+/* ═══ Block 5 — Выгодные предложения ═════════════════════ */
+.offers { background: #f2f3f5; }
+
+.offers-tabs-wrap { margin-bottom: 24px; }
+
+.tabs-pills-wrap {
+  display: flex; align-items: center; gap: 8px;
+  position: relative;
+}
+
+/* Контейнер пилюль: серый */
+.tabs-pills {
+  display: flex; gap: 4px;
+  background: var(--alfa-gray-200);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  overflow-x: auto; scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}
+.tabs-pills::-webkit-scrollbar { display: none; }
+
+/* Пилюля: убираем границу из iter-1, добавляем ту же логику что у tab-btn */
+.pill-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-13);
+  font-weight: var(--fw-medium);
+  color: var(--alfa-gray-700);
+  background: transparent;
+  border: none;
+  white-space: nowrap; flex-shrink: 0;
+  transition: background var(--dur-fast), color var(--dur-fast);
+}
+.pill-btn:hover { color: var(--alfa-black); }
+.pill-btn.is-active {
+  background: var(--alfa-black);
+  color: var(--alfa-white);
+  font-weight: var(--fw-semibold);
+}
+
+.pill-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Стрелки скролла */
+.pills-arrow {
+  display: none;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--alfa-white);
+  box-shadow: var(--shadow-sm);
+  align-items: center; justify-content: center;
+  color: var(--alfa-black); flex-shrink: 0;
+  transition: box-shadow var(--dur-fast);
+}
+@media (min-width: 1024px) { .pills-arrow { display: flex; } }
+.pills-arrow:hover { box-shadow: var(--shadow-md); }
+
+/* Карточки оферов */
+.offers-cards {
+  display: grid; grid-template-columns: 1fr; gap: 12px;
+}
+@media (min-width: 600px)  { .offers-cards { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .offers-cards { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+
+.offer-card {
+  border-radius: var(--radius-20);
+  padding: 28px;
+  min-height: 220px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative; overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base);
+}
+.offer-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+@media (min-width: 768px) { .offer-card { padding: 32px; min-height: 260px; } }
+
+/* Цветовые варианты карточек */
+.offer-card--blue   { background: linear-gradient(135deg, #eaf4ff 0%, #d4eaff 100%); }
+.offer-card--pink   { background: linear-gradient(135deg, #fff0ee 0%, #ffe0db 100%); }
+.offer-card--green  { background: linear-gradient(135deg, #edfbf2 0%, #d8f5e5 100%); }
+.offer-card--yellow { background: linear-gradient(135deg, #fffde7 0%, #fff8c4 100%); }
+.offer-card--purple { background: linear-gradient(135deg, #f3f0ff 0%, #e8e1ff 100%); }
+.offer-card--dark   { background: var(--alfa-black); }
+
+.offer-card-label {
+  font-size: var(--text-11); font-weight: var(--fw-semibold);
+  color: var(--alfa-gray-500);
+  text-transform: uppercase; letter-spacing: .06em;
+  margin-bottom: 8px;
+}
+.offer-card--dark .offer-card-label { color: rgba(255,255,255,.45); }
+
+.offer-card-title {
+  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: var(--fw-bold);
+  color: var(--alfa-black);
+  line-height: var(--lh-snug);
+  max-width: 80%;
+}
+.offer-card--dark .offer-card-title { color: var(--alfa-white); }
+
+.offer-card-desc {
+  font-size: var(--text-13);
+  color: var(--alfa-gray-500);
+  line-height: var(--lh-normal);
+  margin-top: 8px;
+  max-width: 70%;
+}
+.offer-card--dark .offer-card-desc { color: rgba(255,255,255,.55); }
+
+.offer-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; margin-top: 18px;
+  position: relative; z-index: 2;
+}
+.offer-card-price {
+  font-size: var(--text-13); font-weight: var(--fw-medium);
+  color: var(--alfa-gray-700);
+}
+.offer-card--dark .offer-card-price { color: rgba(255,255,255,.6); }
+
+.offer-card-cta {
+  display: inline-flex; align-items: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: var(--text-13); font-weight: var(--fw-semibold);
+  color: var(--alfa-black);
+  background: rgba(0,0,0,.08);
+  transition: background var(--dur-fast);
+  width: fit-content;
+}
+.offer-card-cta:hover { background: rgba(0,0,0,.14); }
+.offer-card--dark .offer-card-cta { background: rgba(255,255,255,.12); color: var(--alfa-white); }
+.offer-card--dark .offer-card-cta:hover { background: rgba(255,255,255,.2); }
+
+/* CDN-изображение в правом нижнем углу */
+.offer-card-illus {
+  position: absolute; bottom: 0; right: 0;
+  width: 50%; max-width: 200px;
+  object-fit: contain; object-position: right bottom;
+  pointer-events: none; opacity: 0.95;
+}

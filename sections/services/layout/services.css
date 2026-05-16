@@ -1,0 +1,224 @@
+/* ============================================
+   Block 4 — Сервисы
+   ============================================ */
+
+.services {
+  background: var(--alfa-white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .services-grid { grid-template-columns: 280px 1fr; gap: 12px; }
+}
+@media (min-width: 1024px) {
+  .services-grid { grid-template-columns: 320px 1fr; gap: 16px; }
+}
+@media (min-width: 1280px) {
+  .services-grid { grid-template-columns: 360px 1fr; }
+}
+
+/* Виджет курсов валют */
+.currency-card {
+  background: var(--alfa-gray-100);
+  border-radius: var(--radius-20);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) { .currency-card { padding: 28px; } }
+
+.currency-card-title {
+  font-size: var(--text-20);
+  font-weight: var(--fw-bold);
+  color: var(--alfa-black);
+}
+
+.currency-table { width: 100%; }
+
+.currency-table-head {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--alfa-gray-200);
+  margin-bottom: 4px;
+}
+.currency-table-head span {
+  font-size: var(--text-11);
+  font-weight: var(--fw-medium);
+  color: var(--alfa-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.currency-table-head span:last-child,
+.currency-table-head span:nth-child(2) {
+  text-align: right;
+  min-width: 56px;
+}
+
+.currency-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--alfa-gray-200);
+  transition: background var(--dur-fast);
+}
+.currency-row:last-child { border-bottom: none; }
+
+.cur-code-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cur-flag { font-size: 18px; line-height: 1; }
+.cur-info {}
+.cur-code {
+  font-size: var(--text-13);
+  font-weight: var(--fw-bold);
+  color: var(--alfa-black);
+  line-height: 1;
+}
+.cur-name {
+  font-size: var(--text-11);
+  color: var(--alfa-gray-500);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.cur-buy, .cur-sell {
+  font-size: var(--text-13);
+  font-weight: var(--fw-medium);
+  color: var(--alfa-black);
+  text-align: right;
+  min-width: 56px;
+  font-variant-numeric: tabular-nums;
+  transition: color var(--dur-fast);
+}
+.cur-sell { font-weight: var(--fw-semibold); }
+
+.currency-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4px;
+}
+.currency-updated {
+  font-size: var(--text-11);
+  color: var(--alfa-gray-400);
+}
+.currency-link {
+  font-size: var(--text-13);
+  font-weight: var(--fw-medium);
+  color: var(--alfa-red);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity var(--dur-fast);
+}
+.currency-link:hover { opacity: 0.75; }
+
+/* Правый блок сервисов */
+.services-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+@media (min-width: 480px) { .services-right { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) {
+  .services-right {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+.service-card {
+  background: var(--alfa-gray-100);
+  border-radius: var(--radius-16);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  min-height: 110px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--dur-base) var(--ease-out),
+              background var(--dur-base);
+}
+.service-card:hover { transform: translateY(-3px); background: #EFEFEF; }
+@media (min-width: 768px) { .service-card { padding: 22px 24px; min-height: 120px; } }
+
+/* Карточка «Отделения» — полная ширина на мобайле (span=2) */
+.service-card--atm {
+  grid-column: 1 / -1;
+  background: var(--alfa-red-bg);
+  flex-direction: row;
+  align-items: center;
+  min-height: 80px;
+}
+.service-card--atm:hover { background: #FBDFDC; }
+
+.service-card--dark {
+  background: var(--alfa-black);
+  color: var(--alfa-white);
+}
+.service-card--dark:hover { background: var(--alfa-gray-900); }
+.service-card--dark .service-card-title { color: var(--alfa-white); }
+.service-card--dark .service-card-desc  { color: rgba(255,255,255,0.55); }
+
+.service-card-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-10);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.service-card-icon--red { background: var(--alfa-red); }
+.service-card-icon--gray { background: var(--alfa-gray-200); }
+.service-card-icon svg { width: 20px; height: 20px; }
+
+.service-card-title {
+  font-size: var(--text-14);
+  font-weight: var(--fw-bold);
+  color: var(--alfa-black);
+  line-height: var(--lh-snug);
+}
+@media (min-width: 768px) { .service-card-title { font-size: var(--text-15); } }
+
+.service-card-desc {
+  font-size: var(--text-12);
+  color: var(--alfa-gray-500);
+  line-height: var(--lh-normal);
+}
+
+.service-card-counter {
+  font-size: var(--text-28);
+  font-weight: var(--fw-black);
+  color: var(--alfa-red);
+  line-height: 1;
+}
+
+.service-card-atm-text {}
+
+/* CDN флаги валют */
+.cur-flag-img {
+  width: 24px; height: 17px;
+  object-fit: cover; border-radius: 3px;
+  flex-shrink: 0; display: block;
+}
+/* Инфо-блок под курсами */
+.currency-info-block {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--alfa-gray-200);
+}
+.currency-info-text { font-size: var(--text-12); color: var(--alfa-gray-500); line-height: 1.55; }

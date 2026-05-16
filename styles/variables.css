@@ -1,0 +1,114 @@
+/* ============================================
+   Design Tokens — Alfa-Bank
+   ============================================ */
+
+:root {
+  /* === Цвета === */
+  --alfa-red:         #EF3124;
+  --alfa-red-dark:    #C9251A;
+  --alfa-red-light:   #FF4538;
+  --alfa-red-bg:      #FDECEA;
+
+  --alfa-black:       #0D0D0D;
+  --alfa-gray-900:    #1A1A1A;
+  --alfa-gray-800:    #2B2B2B;
+  --alfa-gray-700:    #404040;
+  --alfa-gray-500:    #8C8C8C;
+  --alfa-gray-400:    #ADADAD;
+  --alfa-gray-300:    #D4D4D4;
+  --alfa-gray-200:    #EBEBEB;
+  --alfa-gray-100:    #F5F5F5;
+  --alfa-white:       #FFFFFF;
+
+  /* Акценты */
+  --alfa-purple:      #7B5CF5;
+  --alfa-purple-dark: #5B3FD9;
+  --alfa-blue-light:  #E8F4FD;
+  --alfa-green-light: #E6F7EE;
+  --alfa-yellow:      #FFD600;
+
+  /* Градиенты */
+  --grad-hero:        linear-gradient(135deg, #7B5CF5 0%, #4B35B8 60%, #2D1FA0 100%);
+  --grad-red:         linear-gradient(135deg, #EF3124 0%, #C9251A 100%);
+  --grad-dark:        linear-gradient(135deg, #1A1A1A 0%, #2B2B2B 100%);
+
+  /* === Типографика === */
+  --font-base:    'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-black:     900;
+
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.625;
+
+  /* === Размеры шрифтов === */
+  --text-10: 0.625rem;   /* 10px */
+  --text-11: 0.6875rem;  /* 11px */
+  --text-12: 0.75rem;    /* 12px */
+  --text-13: 0.8125rem;  /* 13px */
+  --text-14: 0.875rem;   /* 14px */
+  --text-15: 0.9375rem;  /* 15px */
+  --text-16: 1rem;       /* 16px */
+  --text-18: 1.125rem;   /* 18px */
+  --text-20: 1.25rem;    /* 20px */
+  --text-22: 1.375rem;   /* 22px */
+  --text-24: 1.5rem;     /* 24px */
+  --text-28: 1.75rem;    /* 28px */
+  --text-32: 2rem;       /* 32px */
+  --text-36: 2.25rem;    /* 36px */
+  --text-40: 2.5rem;     /* 40px */
+  --text-48: 3rem;       /* 48px */
+  --text-56: 3.5rem;     /* 56px */
+  --text-64: 4rem;       /* 64px */
+  --text-80: 5rem;       /* 80px */
+
+  /* === Скругления === */
+  --radius-4:    4px;
+  --radius-6:    6px;
+  --radius-8:    8px;
+  --radius-10:   10px;
+  --radius-12:   12px;
+  --radius-16:   16px;
+  --radius-20:   20px;
+  --radius-24:   24px;
+  --radius-32:   32px;
+  --radius-full: 9999px;
+
+  /* === Тени === */
+  --shadow-xs:  0 1px 4px rgba(0,0,0,0.06);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.14);
+  --shadow-xl:  0 16px 48px rgba(0,0,0,0.18);
+
+  /* === Анимации === */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.4, 0, 1, 1);
+  --ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   150ms;
+  --dur-base:   250ms;
+  --dur-slow:   400ms;
+  --dur-slower: 600ms;
+
+  /* === Сетка === */
+  --container-max:     1440px;
+  --container-pad-mob: 16px;
+  --container-pad-tab: 24px;
+  --container-pad-des: 40px;
+  --container-pad-xl:  60px;
+}
+
+/* === Медиа-брейкпоинты (для справки в комментариях) ===
+   xs:   360px   (default mobile)
+   sm:   480px
+   md:   768px   (tablet)
+   lg:  1024px
+   xl:  1280px
+   2xl: 1440px
+   3xl: 1920px
+================================================== */

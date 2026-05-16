@@ -1,0 +1,94 @@
+/* ═══ Block 3 — Кэшбэк ═══════════════════════════════════ */
+.cashback { background: var(--alfa-white); }
+
+.cashback-inner {
+  border-radius: var(--radius-24);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px)  { .cashback-inner { grid-template-columns: 1fr 1fr; min-height: 360px; } }
+@media (min-width: 1024px) { .cashback-inner { min-height: 400px; } }
+
+/* Левая часть: светлый фон с текстом и маленькой кнопкой */
+.cashback-text {
+  background: var(--alfa-gray-100);
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 14px;
+  justify-content: center;
+}
+@media (min-width: 768px)  { .cashback-text { padding: 40px 36px; } }
+@media (min-width: 1024px) { .cashback-text { padding: 48px 44px; } }
+
+.cashback-title {
+  font-size: clamp(20px, 2.4vw, 32px);
+  font-weight: var(--fw-black);
+  color: var(--alfa-black);
+  line-height: var(--lh-tight);
+  max-width: 420px;
+}
+
+.cashback-desc {
+  font-size: var(--text-14);
+  color: var(--alfa-gray-500);
+  line-height: var(--lh-normal);
+  max-width: 380px;
+}
+@media (min-width: 768px) { .cashback-desc { font-size: var(--text-15); } }
+
+.cashback-features {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;
+}
+.cashback-feature {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-12);
+  font-weight: var(--fw-medium);
+  color: var(--alfa-gray-700);
+  background: rgba(0,0,0,0.05);
+}
+
+/* Кнопка: маленькая, левый край, скругление 8px */
+.cashback-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: var(--text-14);
+  font-weight: var(--fw-semibold);
+  background: var(--alfa-black);
+  color: var(--alfa-white);
+  transition: background var(--dur-fast), transform var(--dur-fast);
+  align-self: flex-start;
+  width: fit-content;
+  margin-top: 6px;
+}
+.cashback-btn:hover { background: #1f1f1f; transform: translateY(-1px); }
+
+/* Правая часть: КОМПАКТНОЕ красное поле, скруглённое, не на весь экран */
+.cashback-image-wrap {
+  background: linear-gradient(135deg, var(--alfa-red) 0%, var(--alfa-red-dark) 100%);
+  position: relative; overflow: hidden;
+  min-height: 280px;
+  display: flex; align-items: center; justify-content: center;
+}
+.cashback-image-wrap::before {
+  content: ''; position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%; background: rgba(255,255,255,0.08);
+}
+.cashback-image-wrap::after {
+  content: ''; position: absolute;
+  bottom: -60px; left: -30px;
+  width: 240px; height: 240px;
+  border-radius: 50%; background: rgba(255,255,255,0.05);
+}
+
+.cashback-cdn-img {
+  position: relative; z-index: 1;
+  width: 80%; max-width: 360px;
+  object-fit: contain;
+  border-radius: 0;
+}

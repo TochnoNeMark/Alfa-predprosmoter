@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Альфа-Банк — лучший частный банк России. Дебетовые и кредитные карты, вклады, кредиты, ипотека.">
+  <title>Альфа-Банк — частным лицам</title>
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="sections/hero/layout/hero.css">
+  <link rel="stylesheet" href="sections/products/layout/products.css">
+  <link rel="stylesheet" href="sections/cashback/layout/cashback.css">
+  <link rel="stylesheet" href="sections/services/layout/services.css">
+  <link rel="stylesheet" href="sections/offers/layout/offers.css">
+  <link rel="stylesheet" href="sections/about/layout/about.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 1 — HEADER
+══════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="header-logo" aria-label="Альфа-Банк">
+        <img src="images/logo.webp" alt="Альфа-Банк" class="header-logo-img" width="32" height="32">
+      </a>
+
+      <nav class="header-nav" id="main-nav" aria-label="Основная навигация">
+        <a href="#" class="header-nav-link" data-nav="private-clients">Частным лицам</a>
+        <a href="#" class="header-nav-link" data-nav="small-business">Малому бизнесу и ИП</a>
+        <a href="#" class="header-nav-link" data-nav="large-business">Среднему и крупному бизнесу</a>
+      </nav>
+
+      <button class="header-search" aria-label="Поиск">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M13 13L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="header-actions">
+        <a href="#" class="header-btn-client">Стать клиентом</a>
+        <a href="#" class="header-btn-login">Войти</a>
+        <button class="header-nav-toggle" id="burger-btn" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown nav (nav.js) -->
+  <div class="nav-dropdown" data-dropdown>
+    <div class="container">
+      <div class="nav-dropdown-inner">
+        <div data-dropdown-part="titles"></div>
+        <div data-dropdown-part="content"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="#" class="mobile-nav-link">Частным лицам</a>
+    <a href="#" class="mobile-nav-link">Малому бизнесу и ИП</a>
+    <a href="#" class="mobile-nav-link">Среднему и крупному бизнесу</a>
+    <hr class="mobile-nav-divider">
+    <a href="#" class="mobile-nav-link">Стать клиентом</a>
+    <a href="#" class="mobile-nav-link">Войти</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 1 — HERO: бенто 6×4
+══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Альфа-Вклад: cols 1-4, rows 1-3 -->
+      <a href="#" class="hero-main anim-fade-up" data-delay="0">
+        <img src="images/hero/bento-main.jpg" alt="Альфа-Вклад 22%" class="tile-bg-img">
+        <div class="hero-main-content">
+          <p class="hero-label">Только до 31 мая</p>
+          <h1 class="hero-title">Альфа-Вклад</h1>
+          <p class="hero-subtitle">Ежегодно получать 22% годовых — только до 31 мая</p>
+        </div>
+        </a>
+
+      <!-- Кредитная карта: cols 5-6, rows 1-2 -->
+      <a href="#" class="hero-tile-credit anim-fade-up" data-delay="80">
+        <img src="images/hero/bento-credit-card.png" alt="Кредитная карта" class="tile-bg-img">
+        <div class="tile-overlay">
+          <span class="tile-label">Для покупок</span>
+          <span class="tile-title">Кредитная карта</span>
+        </div>
+      </a>
+
+      <!-- Инвестиции: cols 5-6, rows 3-4 -->
+      <a href="#" class="hero-tile-invest anim-fade-up" data-delay="140">
+        <img src="images/hero/bento-investments.png" alt="Инвестиции" class="tile-bg-img">
+        <div class="tile-overlay">
+          <span class="tile-label">Инвестиции</span>
+          <span class="tile-title">Инвестируйте и зарабатывайте</span>
+        </div>
+      </a>
+
+      <!-- Кредит наличными: cols 1-2, row 4 -->
+      <a href="#" class="hero-tile-kredit anim-fade-up" data-delay="180">
+        <img src="images/hero/bento-bottom-1.png" alt="Кредит наличными" class="tile-bg-img">
+        <div class="tile-overlay">
+          <span class="tile-label"></span>
+          <span class="tile-title">Кредит наличными</span>
+        </div>
+      </a>
+
+      <!-- Бесплатная карта: cols 3-4, row 4 -->
+      <a href="#" class="hero-tile-cashback anim-fade-up" data-delay="220">
+        <img src="images/hero/bento-bottom-2.png" alt="Бесплатная Альфа-Карта" class="tile-bg-img">
+        <div class="tile-overlay">
+          <span class="tile-label"></span>
+          <span class="tile-title">Бесплатная Альфа-Карта</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 2 — ПРОДУКТЫ
+══════════════════════════════════════════ -->
+<section class="products section">
+  <div class="container">
+    <div class="products-header">
+      <h2 class="section-title">Выбирайте лучшее</h2>
+      <div class="tabs" role="tablist" data-tabs aria-label="Тип клиента">
+        <button class="tab-btn" role="tab" data-tab-btn aria-selected="true">Для себя</button>
+        <button class="tab-btn" role="tab" data-tab-btn aria-selected="false">Малому бизнесу</button>
+        <button class="tab-btn" role="tab" data-tab-btn aria-selected="false">Крупному бизнесу</button>
+      </div>
+    </div>
+
+    <!-- Для себя -->
+    <div data-tab-panel role="tabpanel">
+      <div class="products-grid">
+        <a href="#" class="product-card product-card--debet anim-fade-up" data-delay="0">
+          <div class="product-card-body"><h3 class="product-card-name">Дебетовые карты</h3><p class="product-card-desc">Суперкэшбэк до 33%</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/card-current-1.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card product-card--credit anim-fade-up" data-delay="60">
+          <div class="product-card-body"><h3 class="product-card-name">Кредитные карты</h3><p class="product-card-desc">Обслуживание 0 ₽</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/card-current-2.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card anim-fade-up" data-delay="120">
+          <div class="product-card-body"><h3 class="product-card-name">Кредиты</h3><p class="product-card-desc">Одобрение онлайн</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-1.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card anim-fade-up" data-delay="180">
+          <div class="product-card-body"><h3 class="product-card-name">Накопления</h3><p class="product-card-desc">До 22% годовых</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/card-deposit.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card product-card--invest anim-fade-up" data-delay="60">
+          <div class="product-card-body"><h3 class="product-card-name">Инвестиции</h3><p class="product-card-desc">Начните зарабатывать</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-2.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card anim-fade-up" data-delay="120">
+          <div class="product-card-body"><h3 class="product-card-name">Ипотека</h3><p class="product-card-desc">Одобрим за 5 минут</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-3.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card product-card--alfaonly anim-fade-up" data-delay="180">
+          <div class="product-card-body"><h3 class="product-card-name">Alfa Only</h3><p class="product-card-desc">Ваш премиальный сервис</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/card-cashback.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card anim-fade-up" data-delay="240">
+          <div class="product-card-body"><h3 class="product-card-name">Для детей и семьи</h3><p class="product-card-desc">Карты с кэшбэком</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/card-kids.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <!-- Малому бизнесу -->
+    <div data-tab-panel role="tabpanel" hidden>
+      <div class="products-grid">
+        <a href="#" class="product-card anim-fade-up" data-delay="0">
+          <div class="product-card-body"><h3 class="product-card-name">Расчётный счёт</h3><p class="product-card-desc">Открытие онлайн</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-4.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card product-card--debet anim-fade-up" data-delay="60">
+          <div class="product-card-body"><h3 class="product-card-name">Бизнес-карта</h3><p class="product-card-desc">Кэшбэк на всё</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-5.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card anim-fade-up" data-delay="120">
+          <div class="product-card-body"><h3 class="product-card-name">Кредит бизнесу</h3><p class="product-card-desc">До 10 млн ₽ онлайн</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-6.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card product-card--invest anim-fade-up" data-delay="180">
+          <div class="product-card-body"><h3 class="product-card-name">Эквайринг</h3><p class="product-card-desc">Комиссия от 1,2%</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-7.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <!-- Крупному бизнесу -->
+    <div data-tab-panel role="tabpanel" hidden>
+      <div class="products-grid">
+        <a href="#" class="product-card product-card--alfaonly anim-fade-up" data-delay="0">
+          <div class="product-card-body"><h3 class="product-card-name">Корпоративный банкинг</h3><p class="product-card-desc">Персональный менеджер</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/p364-8.png" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card anim-fade-up" data-delay="60">
+          <div class="product-card-body"><h3 class="product-card-name">Проектное финансирование</h3><p class="product-card-desc">Индивидуальные условия</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/card-01.jpg" class="product-card-illus" alt="" loading="lazy">
+        </a>
+        <a href="#" class="product-card product-card--invest anim-fade-up" data-delay="120">
+          <div class="product-card-body"><h3 class="product-card-name">Казначейство</h3><p class="product-card-desc">Управление ликвидностью</p></div>
+          <div class="product-card-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img src="images/products/card-02.jpg" class="product-card-illus" alt="" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 3 — КЭШБЭК
+══════════════════════════════════════════ -->
+<section class="cashback section">
+  <div class="container">
+    <div class="cashback-inner anim-fade-up">
+      <div class="cashback-text">
+        <h2 class="cashback-title">Наши клиенты получают повышенный кэшбэк у партнёров</h2>
+        <p class="cashback-desc">Кэшбэк до 40% на покупки у тысяч партнёров — на еду, транспорт, развлечения, доставку, одежду и другие категории.</p>
+        <div class="cashback-features">
+          <span class="cashback-feature">До 40% кэшбэк</span>
+          <span class="cashback-feature">Тысячи партнёров</span>
+          <span class="cashback-feature">Выплата ежемесячно</span>
+        </div>
+        <a href="#" class="btn btn-red">Стать клиентом</a>
+      </div>
+      <div class="cashback-phone-wrap">
+        <img src="images/cashback/video-block.jpg" alt="Кэшбэк в Альфа-Банке" class="cashback-cdn-img" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 4 — СЕРВИСЫ
+══════════════════════════════════════════ -->
+<section class="services section">
+  <div class="container">
+    <div class="section-header"><h2 class="section-title">Сервисы</h2></div>
+    <div class="services-grid">
+
+      <!-- Курс валют: col1, rows 1-3 -->
+      <div class="currency-card currency-widget anim-fade-up" data-delay="0">
+        <p class="currency-card-title">Курсы валют</p>
+        <div class="currency-table">
+          <div class="currency-table-head">
+            <span>Валюта</span><span>Покупка</span><span>Продажа</span>
+          </div>
+          <div class="currency-row">
+            <div class="cur-code-wrap">
+              <img src="images/services/usd.svg" alt="" class="cur-flag-img">
+              <div class="cur-info"><p class="cur-code">USD</p><p class="cur-name">Доллар</p></div>
+            </div>
+            <span class="cur-buy">80.15</span><span class="cur-sell">82.40</span>
+          </div>
+          <div class="currency-row">
+            <div class="cur-code-wrap">
+              <img src="images/services/eur.svg" alt="" class="cur-flag-img">
+              <div class="cur-info"><p class="cur-code">EUR</p><p class="cur-name">Евро</p></div>
+            </div>
+            <span class="cur-buy">87.20</span><span class="cur-sell">89.80</span>
+          </div>
+          <div class="currency-row">
+            <div class="cur-code-wrap">
+              <img src="images/services/cny.svg" alt="" class="cur-flag-img">
+              <div class="cur-info"><p class="cur-code">CNY</p><p class="cur-name">Юань</p></div>
+            </div>
+            <span class="cur-buy">10.95</span><span class="cur-sell">11.30</span>
+          </div>
+        </div>
+        <div class="currency-info-block">
+          <p class="currency-info-text">Указаны курсы для безналичного обмена. Обменять можно в приложении или интернет-банке.</p>
+          <a href="#" class="currency-link">Все курсы →</a>
+        </div>
+        <div class="currency-footer">
+          <span class="currency-updated">Обновлено: только что</span>
+          <a href="#" class="currency-link">Выгодный курс →</a>
+        </div>
+      </div>
+
+      <!-- Правая колонка сервисов -->
+      <div class="services-right">
+        <a href="#" class="service-card service-card--wide anim-fade-up" data-delay="80">
+          <div class="service-card-icon service-card-icon--gray">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 8v10h5v-5h4v5h5V8L10 2z" stroke="#404040" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="service-card-title">Отделения банка и банкоматы</p>
+            <p class="service-card-desc">Найдите ближайший по адресу или на карте</p>
+          </div>
+          <span class="service-card-counter">450+</span>
+        </a>
+        <a href="#" class="service-card anim-fade-up" data-delay="120">
+          <div class="service-card-icon service-card-icon--gray">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="11" rx="2" stroke="#404040" stroke-width="1.5"/><path d="M6 9h8M6 12h5" stroke="#404040" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <p class="service-card-title">Платежи и переводы</p>
+          <p class="service-card-desc">Без комиссии по всей России</p>
+        </a>
+        <a href="#" class="service-card anim-fade-up" data-delay="160">
+          <div class="service-card-icon service-card-icon--gray">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 8v10h5v-5h4v5h5V8L10 2z" stroke="#404040" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <p class="service-card-title">Купить или продать недвижимость</p>
+          <p class="service-card-desc">Сервис поиска, купли и продажи жилья</p>
+        </a>
+        <a href="#" class="service-card anim-fade-up" data-delay="200">
+          <div class="service-card-icon service-card-icon--gray">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="4" stroke="#404040" stroke-width="1.5"/><path d="M3 18c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="#404040" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <p class="service-card-title">Поддержка</p>
+          <p class="service-card-desc">Напишите нам в чате или позвоните</p>
+        </a>
+        <a href="#" class="service-card service-card--dark anim-fade-up" data-delay="240">
+          <div class="service-card-icon" style="background:rgba(255,255,255,0.1)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="7" stroke="white" stroke-width="1.5"/></svg>
+          </div>
+          <p class="service-card-title">Оформить самозанятость</p>
+          <p class="service-card-desc">Регистрация в два клика</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 5 — ПРЕДЛОЖЕНИЯ
+══════════════════════════════════════════ -->
+<section class="offers section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Пользуйтесь выгодными предложениями в наших сервисах</h2>
+    </div>
+
+    <div class="offers-tabs-wrap" data-tabs>
+      <div class="tabs-pills-wrap">
+        <button class="pills-arrow pills-prev" aria-label="Назад">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="tabs-pills" role="tablist">
+          <button class="pill-btn" role="tab" data-tab-btn aria-selected="true"><span class="pill-icon" style="background:#E8F4FF">📱</span>Альфа-Мобайл</button>
+          <button class="pill-btn" role="tab" data-tab-btn aria-selected="false"><span class="pill-icon" style="background:#FFF3E0">✈️</span>Альфа-Трэвел</button>
+          <button class="pill-btn" role="tab" data-tab-btn aria-selected="false"><span class="pill-icon" style="background:#FCE4EC">🎭</span>Афиша</button>
+          <button class="pill-btn" role="tab" data-tab-btn aria-selected="false"><span class="pill-icon" style="background:#E8F5E9">❤️</span>Здоровье</button>
+          <button class="pill-btn" role="tab" data-tab-btn aria-selected="false"><span class="pill-icon" style="background:#F3E5F5">🏠</span>Подбор жилья</button>
+          <button class="pill-btn" role="tab" data-tab-btn aria-selected="false"><span class="pill-icon" style="background:#E3F2FD">🛡️</span>Страхование</button>
+        </div>
+        <button class="pills-arrow pills-next" aria-label="Вперёд">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div data-tab-panel role="tabpanel">
+        <div class="offers-cards">
+          <div class="offer-card offer-card--blue anim-fade-up" data-delay="0">
+            <div><p class="offer-card-label">Альфа-Мобайл</p><h3 class="offer-card-title">Альфа-выгодная связь</h3><p class="offer-card-desc">10, 15, 300 минут на звонки — тариф под ваш ритм</p></div>
+            <div class="offer-card-footer"><p class="offer-card-price">от 300 ₽/мес</p><a href="#" class="offer-card-cta">Подключить →</a></div>
+            <img src="images/offers/pure-card-558x210-1.png" class="offer-card-illus" alt="" loading="lazy">
+          </div>
+          <div class="offer-card offer-card--pink anim-fade-up" data-delay="80">
+            <div><p class="offer-card-label">Альфа-Мобайл</p><h3 class="offer-card-title">Безлимитный интернет</h3><p class="offer-card-desc">Безлимит и мессенджеры с Yota</p></div>
+            <div class="offer-card-footer"><a href="#" class="offer-card-cta">Оформить →</a></div>
+            <img src="images/offers/pure-card-558x210-2.png" class="offer-card-illus" alt="" loading="lazy">
+          </div>
+          <div class="offer-card offer-card--green anim-fade-up" data-delay="160">
+            <div><p class="offer-card-label">Альфа-Мобайл</p><h3 class="offer-card-title">Роуминг по всему миру</h3><p class="offer-card-desc">Связь в 200+ странах</p></div>
+            <div class="offer-card-footer"><p class="offer-card-price">от 490 ₽/сутки</p><a href="#" class="offer-card-cta">Подробнее →</a></div>
+            <img src="images/offers/pure-card-558x210-3.png" class="offer-card-illus" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div data-tab-panel role="tabpanel" hidden>
+        <div class="offers-cards">
+          <div class="offer-card offer-card--yellow anim-fade-up" data-delay="0"><div><p class="offer-card-label">Альфа-Трэвел</p><h3 class="offer-card-title">Мильная программа</h3><p class="offer-card-desc">Копите мили за покупки</p></div><div class="offer-card-footer"><a href="#" class="offer-card-cta">Подключить →</a></div><img src="images/offers/pure-card-655.png" class="offer-card-illus" alt="" loading="lazy"></div>
+          <div class="offer-card offer-card--blue anim-fade-up" data-delay="80"><div><p class="offer-card-label">Альфа-Трэвел</p><h3 class="offer-card-title">Бронирование отелей</h3><p class="offer-card-desc">До 20% скидки у партнёров</p></div><div class="offer-card-footer"><a href="#" class="offer-card-cta">Выбрать →</a></div><img src="images/offers/pure-card-655-2.png" class="offer-card-illus" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div data-tab-panel role="tabpanel" hidden>
+        <div class="offers-cards"><div class="offer-card offer-card--purple anim-fade-up"><div><p class="offer-card-label">Афиша</p><h3 class="offer-card-title">Билеты в театры и кино</h3><p class="offer-card-desc">Скидка 10% для клиентов</p></div><div class="offer-card-footer"><a href="#" class="offer-card-cta">Купить билет →</a></div><img src="images/offers/pure-card-med-3.png" class="offer-card-illus" alt="" loading="lazy"></div></div>
+      </div>
+      <div data-tab-panel role="tabpanel" hidden>
+        <div class="offers-cards"><div class="offer-card offer-card--green anim-fade-up"><div><p class="offer-card-label">Здоровье</p><h3 class="offer-card-title">Телемедицина 24/7</h3><p class="offer-card-desc">Консультация врача онлайн</p></div><div class="offer-card-footer"><p class="offer-card-price">от 0 ₽</p><a href="#" class="offer-card-cta">Получить →</a></div><img src="images/offers/pure-card-med-1.png" class="offer-card-illus" alt="" loading="lazy"></div></div>
+      </div>
+      <div data-tab-panel role="tabpanel" hidden>
+        <div class="offers-cards"><div class="offer-card offer-card--blue anim-fade-up"><div><p class="offer-card-label">Подбор жилья</p><h3 class="offer-card-title">Найдём вашу квартиру</h3><p class="offer-card-desc">Каталог новостроек и вторички</p></div><div class="offer-card-footer"><a href="#" class="offer-card-cta">Смотреть →</a></div><img src="images/offers/pure-card-med-2.png" class="offer-card-illus" alt="" loading="lazy"></div></div>
+      </div>
+      <div data-tab-panel role="tabpanel" hidden>
+        <div class="offers-cards"><div class="offer-card offer-card--dark anim-fade-up"><div><p class="offer-card-label">Страхование</p><h3 class="offer-card-title">Защита имущества</h3><p class="offer-card-desc">Квартира, авто, здоровье онлайн</p></div><div class="offer-card-footer"><a href="#" class="offer-card-cta">Застраховаться →</a></div><img src="images/offers/pure-card-364.png" class="offer-card-illus" alt="" loading="lazy"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 6 — О БАНКЕ
+══════════════════════════════════════════ -->
+<section class="about section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">О банке</h2>
+      <div class="tabs" role="tablist" data-tabs aria-label="Раздел о банке">
+        <button class="tab-btn" role="tab" data-tab-btn aria-selected="true">Достижения</button>
+        <button class="tab-btn" role="tab" data-tab-btn aria-selected="false">Работа в Альфе</button>
+      </div>
+    </div>
+
+    <div data-tab-panel role="tabpanel">
+      <div class="about-cards">
+        <div class="about-card about-card--employer anim-fade-up" data-delay="0">
+          <div>
+            <span class="about-card-badge">🏆 Рейтинг 2024</span>
+            <h3 class="about-card-title" style="margin-top:16px">Альфа-Банк — лучший работодатель России</h3>
+          </div>
+          <div class="employer-rating">
+            <span class="employer-stars">★★★★★</span>
+            <span class="employer-score">4.8</span>
+            <span class="employer-source">/ HH.ru</span>
+          </div>
+          <img src="images/about/employer.png" alt="" class="employer-illus" loading="lazy">
+        </div>
+        <div class="about-card about-card--stats anim-fade-up" data-delay="80">
+          <p class="about-card-heading">Крупнейший частный банк</p>
+          <div class="stats-list">
+            <div class="stat-item"><p class="stat-value">36 млн+</p><p class="stat-label">активных клиентов</p></div>
+            <div class="stat-item"><p class="stat-value">700+</p><p class="stat-label">отделений по России</p></div>
+            <div class="stat-item"><p class="stat-value">27 000+</p><p class="stat-label">банкоматов</p></div>
+          </div>
+        </div>
+        <div class="about-card about-card--reviews anim-fade-up" data-delay="160">
+          <p class="about-card-heading">Отзывы клиентов</p>
+          <div class="reviews-meta">
+            <span class="reviews-rating-big">4.7</span>
+            <div class="reviews-stars-wrap">
+              <span class="reviews-stars">★★★★★</span>
+              <span class="reviews-count">128 000+ отзывов</span>
+            </div>
+          </div>
+          <div class="reviews-bars">
+            <div class="reviews-bar-row"><span class="reviews-bar-label">5</span><div class="reviews-bar-track"><div class="reviews-bar-fill reviews-bar-fill--green" data-width="78%" style="width:0%"></div></div></div>
+            <div class="reviews-bar-row"><span class="reviews-bar-label">4</span><div class="reviews-bar-track"><div class="reviews-bar-fill" data-width="14%" style="width:0%"></div></div></div>
+            <div class="reviews-bar-row"><span class="reviews-bar-label">3</span><div class="reviews-bar-track"><div class="reviews-bar-fill" data-width="5%" style="width:0%"></div></div></div>
+            <div class="reviews-bar-row"><span class="reviews-bar-label">2</span><div class="reviews-bar-track"><div class="reviews-bar-fill" data-width="2%" style="width:0%"></div></div></div>
+            <div class="reviews-bar-row"><span class="reviews-bar-label">1</span><div class="reviews-bar-track"><div class="reviews-bar-fill" data-width="1%" style="width:0%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-tab-panel role="tabpanel" hidden>
+      <div class="jobs-grid">
+        <div class="job-card anim-fade-up" data-delay="0"><span class="job-card-tag">ИТ-разработка</span><h3 class="job-card-title">Технологии будущего</h3><p class="job-card-desc">Python, Go, Kotlin, React — строим продукт для 36 млн пользователей.</p></div>
+        <div class="job-card job-card--dark anim-fade-up" data-delay="80"><span class="job-card-tag" style="background:rgba(239,49,36,0.2)">Финансы</span><h3 class="job-card-title">Карьера в финтехе</h3><p class="job-card-desc">Аналитика, риск-менеджмент, продуктовые роли.</p></div>
+        <div class="job-card anim-fade-up" data-delay="160"><span class="job-card-tag">Обслуживание</span><h3 class="job-card-title">Сервис мирового уровня</h3><p class="job-card-desc">Клиентский опыт и поддержка на острие банковского сервиса.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/nav.js"></script>
+</body>
+</html>

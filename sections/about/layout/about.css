@@ -1,0 +1,142 @@
+/* ═══ Block 6 — О банке ═════════════════════════════════ */
+.about { background: var(--alfa-white); }
+
+/* Бенто 2×2:
+   [Лучший работодатель] [Крупнейший банк]
+   [Лучший работодатель] [Отзывы]            */
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  min-height: 480px;
+}
+@media (min-width: 1024px) { .about-cards { min-height: 540px; gap: 16px; } }
+@media (max-width: 767px) {
+  .about-cards { grid-template-columns: 1fr; grid-template-rows: auto; min-height: 0; gap: 10px; }
+}
+
+.about-card--employer { grid-column: 1; grid-row: 1 / 3; }
+.about-card--stats    { grid-column: 2; grid-row: 1; }
+.about-card--reviews  { grid-column: 2; grid-row: 2; }
+@media (max-width: 767px) {
+  .about-card--employer, .about-card--stats, .about-card--reviews {
+    grid-column: 1; grid-row: auto;
+  }
+}
+
+/* Карточка работодатель (tall, чёрный) */
+.about-card--employer {
+  background: var(--alfa-black);
+  border-radius: var(--radius-24);
+  padding: 32px;
+  position: relative; overflow: hidden;
+  cursor: pointer;
+  display: flex; flex-direction: column; justify-content: space-between;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.about-card--employer:hover { transform: translateY(-3px); }
+@media (min-width: 1024px) { .about-card--employer { padding: 40px; } }
+@media (max-width: 767px) { .about-card--employer { min-height: 320px; } }
+
+.about-card-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 8px;
+  background: var(--alfa-red); color: var(--alfa-white);
+  font-size: var(--text-11); font-weight: var(--fw-bold);
+  width: fit-content;
+}
+.about-card-title {
+  font-size: clamp(18px, 1.8vw, 26px);
+  font-weight: var(--fw-black);
+  color: var(--alfa-white);
+  line-height: var(--lh-tight);
+  max-width: 280px;
+}
+.employer-rating {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 14px; position: relative; z-index: 2;
+}
+.employer-stars { color: #ffd600; font-size: 18px; letter-spacing: 2px; }
+.employer-score { font-size: var(--text-14); font-weight: var(--fw-bold); color: rgba(255,255,255,.9); }
+.employer-source { font-size: var(--text-12); color: rgba(255,255,255,.4); }
+
+.employer-illus {
+  position: absolute; bottom: 0; right: 0;
+  width: 55%; max-width: 220px;
+  object-fit: contain; object-position: right bottom;
+  pointer-events: none;
+}
+
+/* Карточки stats и reviews (светло-серый) */
+.about-card--stats,
+.about-card--reviews {
+  background: var(--alfa-gray-100);
+  border-radius: var(--radius-24);
+  padding: 28px;
+  cursor: pointer;
+  transition: background var(--dur-base);
+  display: flex; flex-direction: column;
+}
+.about-card--stats:hover,
+.about-card--reviews:hover { background: var(--alfa-gray-200); }
+@media (min-width: 1024px) { .about-card--stats, .about-card--reviews { padding: 32px; } }
+
+.about-card-heading {
+  font-size: var(--text-16); font-weight: var(--fw-bold);
+  color: var(--alfa-black); margin-bottom: 18px;
+}
+
+/* Stats */
+.stats-list { display: flex; flex-direction: column; gap: 16px; }
+.stat-value {
+  font-size: clamp(26px, 2.6vw, 36px);
+  font-weight: var(--fw-black); color: var(--alfa-black);
+  line-height: 1;
+}
+.stat-label { font-size: var(--text-13); color: var(--alfa-gray-500); margin-top: 3px; }
+
+/* Reviews */
+.reviews-meta { display: flex; align-items: center; gap: 16px; }
+.reviews-rating-big {
+  font-size: clamp(40px, 4.5vw, 56px);
+  font-weight: var(--fw-black); color: var(--alfa-black);
+  line-height: 1;
+}
+.reviews-stars-wrap { display: flex; flex-direction: column; gap: 2px; }
+.reviews-stars { font-size: 18px; color: #ffd600; letter-spacing: 2px; }
+.reviews-count { font-size: var(--text-12); color: var(--alfa-gray-500); }
+
+.reviews-bars { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+.reviews-bar-row { display: flex; align-items: center; gap: 8px; }
+.reviews-bar-label { font-size: var(--text-11); color: var(--alfa-gray-500); width: 8px; text-align: right; flex-shrink: 0; }
+.reviews-bar-track { flex: 1; height: 4px; background: var(--alfa-gray-300); border-radius: var(--radius-full); overflow: hidden; }
+.reviews-bar-fill { height: 100%; border-radius: var(--radius-full); background: #ffd600; transition: width 1s var(--ease-out); }
+.reviews-bar-fill--green { background: #4caf50; }
+
+/* Jobs */
+.jobs-grid {
+  display: grid; grid-template-columns: 1fr; gap: 12px;
+}
+@media (min-width: 600px)  { .jobs-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .jobs-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+
+.job-card {
+  background: var(--alfa-gray-100); border-radius: var(--radius-20);
+  padding: 28px; min-height: 200px;
+  display: flex; flex-direction: column; gap: 10px;
+  cursor: pointer; transition: transform var(--dur-base), background var(--dur-base);
+}
+.job-card:hover { transform: translateY(-3px); background: var(--alfa-gray-200); }
+.job-card--dark { background: var(--alfa-black); }
+.job-card--dark:hover { background: #1f1f1f; }
+.job-card-tag {
+  display: inline-flex; padding: 4px 10px; border-radius: 8px;
+  font-size: var(--text-11); font-weight: var(--fw-bold);
+  background: rgba(239,49,36,.1); color: var(--alfa-red);
+  width: fit-content;
+}
+.job-card-title { font-size: var(--text-18); font-weight: var(--fw-bold); color: var(--alfa-black); }
+.job-card--dark .job-card-title { color: var(--alfa-white); }
+.job-card-desc { font-size: var(--text-13); color: var(--alfa-gray-500); line-height: var(--lh-normal); }
+.job-card--dark .job-card-desc { color: rgba(255,255,255,.55); }
