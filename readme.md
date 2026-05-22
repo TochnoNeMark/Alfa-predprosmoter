@@ -2,54 +2,6 @@
 
  Вёрстка главной страницы `alfabank.ru` для предпросмотра Матвея: 6 блоков, адаптив **1920 → 360 px**, все изображения — реальные CDN-ассеты банка с `alfabank.servicecdn.ru`, лого — оригинальный `webp` от Альфы.
 
- Структура проекта
-
-```
-alfabank/
-├── package.json                      # Vite 5 dev-сервер
-├── vite.config.js                    # порты, host, build outDir=dist
-├── .gitignore                        # node_modules, dist, .vite, IDE
-├── index.html                        # Единый HTML: все 6 блоков
-│
-├── styles/
-│   ├── fonts.css                     # @import Golos Text (Google Fonts)
-│   ├── reset.css                     # Современный CSS Reset
-│   ├── variables.css                 # Design tokens (цвета, типографика, радиусы)
-│   └── base.css                      # Глобальные стили: контейнер, секции,
-│                                     # табы, пилюли (BLACK active), анимации,
-│                                     # nav-dropdown, мобильное меню
-│
-├── scripts/
-│   ├── main.js                       # Хедер, бургер, табы, пилюли, валюта,
-│   │                                 # scroll-анимации, review bars
-│   └── nav.js                        # Dropdown-навигация (hover, data-nav,
-│                                     # 6 разделов «Частным лицам»)
-│
-├── sections/                         # CSS (и JS) каждого блока
-│   ├── hero/layout/
-│   │   ├── hero.css                  # Хедер + бенто-сетка 6×4
-│   │   └── hero.js                   # (зарезервировано)
-│   ├── products/layout/products.css  # Продукты: 3 таба, карточки 2→3→4 кол.
-│   ├── cashback/layout/cashback.css  # Кэшбэк: 2-col карточка (серый + красный)
-│   ├── services/layout/services.css  # Сервисы: курсы валют + список
-│   ├── offers/layout/offers.css      # Предложения: 6 пилюль, цветные карточки 3 кол.
-│   └── about/layout/about.css        # О банке: бенто 2×2 (employer спанит 2 строки)
-│
-└── images/                           # Изображения с alfabank.servicecdn.ru
-    ├── logo.webp                     # Оригинальный логотип Альфа-Банка
-    ├── hero/                         # bento-main.jpg, bento-credit-card.png,
-    │                                 # bento-investments.png, bento-bottom-1/2.png
-    ├── products/                     # card-current-1/2.png, p364-1…8.png,
-    │                                 # card-deposit/cashback/kids.png,
-    │                                 # icon-tab-1…6.png, card-01…10.jpg
-    ├── cashback/                     # video-block.jpg
-    ├── services/                     # usd.svg, eur.svg, cny.svg,
-    │                                 # s-branches/payments/realty/support.png
-    ├── offers/                       # pure-card-tall/tall-2/med-1…3/wide.png,
-    │                                 # pure-card-655/655-2/364.png,
-    │                                 # pure-card-558x210-1…3.png
-    └── about/                        # employer.png
-```
 Для верстки сайта была использована нейросеть Claude Code. 
 
 Хронология разработки
